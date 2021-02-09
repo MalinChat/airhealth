@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import './App.css';
 import AQIInfo from './components/aqi-info';
+import AQIForm from './components/AQIForm';
 
 
 
 function App() {
-const [city, setCity] = useState([]);
 
 
-async function getCity() {
+
+async function getAQI(requestedData, city) {
   let url ='https://api.waqi.info/feed/:city/?token=';
-
+    console.log(city)
 
   try {
     let response = await fetch(url);
@@ -35,7 +36,7 @@ async function getCity() {
     <div className="App">
       <h1>AirHealth</h1>
       <h3>Get the AQI of your city</h3>
-      <button onClick={getCity} type="button">Get city</button>
+      
       <ul>
         {
           city.map(c=> <li>{c.city}</li>)
@@ -43,7 +44,8 @@ async function getCity() {
 
       </ul>
 
-      
+
+    <AQIForm onSubmit={(requestedData, city) => getAQI(requestedData, city)}/>
     <AQIInfo/>
 
     
