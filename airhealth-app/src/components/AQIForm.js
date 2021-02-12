@@ -29,12 +29,12 @@ function handleEvent(event){
         props.onSubmit(requestedData, city)
 
     //reset form fields
-    setCity("");
+    //setCity("");
 }
 
 
     return (
-            <div classname="AQIForm">
+            <div className="AQIForm">
                 <form onSubmit={handleEvent}>
                     <label>
                         Enter city
