@@ -3,6 +3,8 @@ import './App.css';
 import AQIInfo from './components/aqi-info';
 import AQIForm from './components/AQIForm';
 import DisplayResults from './components/DisplayResults';
+import DisplayForecast from './components/DisplayForecast';
+import Recommendation from './components/Recommendation';
 
 /* for later
   city.map(c=> <li>{c.city}</li>)
@@ -15,9 +17,10 @@ const API_URL="https://api.waqi.info/feed"
 
 function App() {
 
-  const [city, setCity] = useState("");
+  //const [city, setCity] = useState("");
   const [aqi, setAqi] = useState("");
   const [forecast, setForecast] = useState("");
+  const [error, SetError] = useState("");
 
 async function getAQI(requestedData, city) {
   let url =`${API_URL}/${city}/?token=${API_KEY}`;
@@ -41,12 +44,13 @@ async function getAQI(requestedData, city) {
 
     } else {
       console.log("Server error")
-      
+      SetError(`Server error`)
     }
  
   } catch (err){
     //Server not contacted
       console.log(`Network error: ${err.message}`)
+      SetError(`Network error`)
   }
 
 }
@@ -63,7 +67,9 @@ async function getAQI(requestedData, city) {
 
 
     <AQIForm onSubmit={(requestedData, city) => getAQI(requestedData, city)}/>
-    <DisplayResults aqi={aqi}/>
+    {aqi && <DisplayResults aqi={aqi}/>}
+    {forecast && <DisplayForecast forecast={forecast}/>}
+    {aqi && <Recommendation aqi={aqi}/>}
     <AQIInfo/>
 
     

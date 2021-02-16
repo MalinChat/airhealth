@@ -29,7 +29,7 @@ function handleEvent(event){
         props.onSubmit(requestedData, city)
 
     //reset form fields
-    //setCity("");
+    setCity("");
 }
 
 
