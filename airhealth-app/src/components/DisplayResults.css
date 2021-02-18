@@ -9,3 +9,9 @@ h3 {
     color: #276678;
     font-weight: 600;
     }
+
+table {
+    margin-left: 630px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
