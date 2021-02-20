@@ -21,11 +21,11 @@ function DisplayForecast(props){
                                 <th>AQI</th>
                             </tr>
                             {
-                             forecast.data.forecast.daily.pm25.map(elem => (
+                             forecast.data.forecast.daily.pm25.map((elem, index) => (
                             
                                 <tr>
-                                    <td key={elem.forecast}>{forecast.data.forecast.daily.pm25[0].day}</td>
-                                    <td key={elem.forecast}>{forecast.data.forecast.daily.pm25[0].avg}</td>
+                                    <td key={elem.index}>{elem.day}</td>
+                                    <td key={elem.index}>{elem.avg}</td>
 
                                 </tr>
                              ))
