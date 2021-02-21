@@ -44,7 +44,8 @@ function handleEvent(event){
                         value={city}
                         onChange={handleChange}
                         />
-
+                
+                <br/>
                     </label>
                     <button type="submit">Get AQI</button>
                     <button type="button" onClick={handleEvent}>Get forecast</button>

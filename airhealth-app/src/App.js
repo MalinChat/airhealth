@@ -1,15 +1,12 @@
 import React, {useState} from 'react';
 import './App.css';
-import AQIInfo from './components/aqi-info';
+import AQIInfo from './components/AQI-Info';
 import AQIForm from './components/AQIForm';
-import DisplayResults from './components/DisplayResults';
 import DisplayForecast from './components/DisplayForecast';
-import Recommendation from './components/Recommendation';
+import DisplayAQI from './components/DisplayAQI';
 
-/* for later
-  city.map(c=> <li>{c.city}</li>)
-}
-*/
+
+
 //original: https://api.waqi.info/feed/:city/?token=
 
 const API_KEY ="8cd2f5f45e922a9f84630d9009f8b2bcc76a8489";
@@ -20,7 +17,7 @@ function App() {
   //const [city, setCity] = useState("");
   const [aqi, setAqi] = useState("");
   const [forecast, setForecast] = useState("");
-  const [error, SetError] = useState("");
+  const [error, setError] = useState("");
 
 async function getAQI(requestedData, city) {
   let url =`${API_URL}/${city}/?token=${API_KEY}`;
@@ -35,41 +32,47 @@ async function getAQI(requestedData, city) {
       //Server received and understood my request
       //wait for data
       let data = await response.json();
-      if(requestedData === "AQI"){
-        setAqi(data);
-      } else {
-        setForecast(data);
-      }
-    
-
+      if(requestedData === "AQI") {
+          if(data.status === "ok") { 
+            setAqi(data);
+         } else {
+          setError("Unknown city")
+        }
+       
+       } else {
+            if(data.status === "ok") { 
+               setForecast(data);
+            } else {
+               setError("Unknown city")
+        }
+     }
     } else {
       console.log("Server error")
-      SetError(`Server error`)
+      setError(`Server error:  ${response.status} ${response.statusText}`)
     }
  
   } catch (err){
     //Server not contacted
+    setError(`Network error: ${err.message}`);
       console.log(`Network error: ${err.message}`)
-      SetError(`Network error`)
+      
   }
 
-}
+};
 
   return (
     <div className="App">
       <h1>AirHealth</h1>
       <h3>Get the AQI of your city</h3>
-      
-      <ul>
-       
-
-      </ul>
+  
 
 
     <AQIForm onSubmit={(requestedData, city) => getAQI(requestedData, city)}/>
-    {aqi && <DisplayResults aqi={aqi}/>}
+    {aqi && <DisplayAQI aqi={aqi}/>}
+  
     {forecast && <DisplayForecast forecast={forecast}/>}
-    {aqi && <Recommendation aqi={aqi}/>}
+    
+    {error && <h3>{error}</h3>}
     <AQIInfo/>
 
     

@@ -1,4 +1,4 @@
-import "./aqi-info.css";
+import "./AQI-Info.css";
 
 
 function AQIInfo() {

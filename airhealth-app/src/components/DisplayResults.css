@@ -1,17 +1,32 @@
+
 p {
 font-size: 20px;
 color: #276678;
+font-weight: bold;
+}
+
+td {
+    font-size: 20px;
+    color: #276678;
 
 }
 
-h3 {
+h3, th {
     font-size: 25px;
     color: #276678;
     font-weight: 600;
     }
 
+
 table {
     margin-left: 630px;
     margin-top: 30px;
-    margin-bottom: 30px;
+}
+
+.DisplayAQI { 
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 50px;
+max-width:600px;
 }

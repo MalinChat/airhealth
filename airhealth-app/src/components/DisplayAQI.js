@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
+import "./DisplayResults.css";
 
 
-
-function Recommendation(props){
+function DisplayAQI(props){
     let recommendation;
     let aqi = props.aqi;
 
@@ -20,12 +20,25 @@ function Recommendation(props){
                         } else {
                             recommendation = "The air quality is considered hazardous. Everyone may experience more serious health effects. Everyone should avoid all outdoor exertion";
                             }
+   
+     /*   function errorHandler(aqi){
+            if (aqi.data.city.name !== "undefined"){
+                return true
+            }
+            return false
+        }
+        
+*/
+        
+       
     return (
-        <div className="Recommendation">
+        <div className="DisplayAQI">
+
+            <h4>The AQI in {aqi.data.city.name} is: {aqi.data.aqi} </h4>
             <p>Recommendation: {recommendation}</p>
         </div>
     );
    
 }
 
-export default Recommendation;
+export default DisplayAQI;

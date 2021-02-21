@@ -9,6 +9,7 @@
     border-radius: 5px;
     overflow: hidden;
     background: #1687a7;
+    margin-top: 30px;
    
   }
 
@@ -19,6 +20,7 @@
 
   .accordion_label{
     text-align: left;
+    font-size: 16px;
     display: block;
     color: white;
     font-weight: 500;
