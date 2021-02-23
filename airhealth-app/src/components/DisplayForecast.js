@@ -13,7 +13,7 @@ function DisplayForecast(props){
     return(
         
             <div className="DisplayForecast">
-                <p>The air quality forecast for {forecast.data.city.name} is:</p>
+                <h4>The air quality forecast for {forecast.data.city.name} is:</h4>
                     <table>
                         <tbody>
                             <tr>

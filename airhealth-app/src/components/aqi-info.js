@@ -18,7 +18,7 @@ return (
            <label for="section1" 
             class="accordion_label">What is Air Quality Index (AQI)?</label>
             <div class="accordion_content">
-            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="info_text"> An air quality index (AQI) is used to communicate how polluted the air currently is or how polluted it is forecast to become. Public health risks increase as the AQI rises. </p>
             </div>
           
     </div>
@@ -31,7 +31,8 @@ return (
         class="accordion_label">How is a community’s AQI calculated
         and reported?</label>
         <div class="accordion_content">
-          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p class="info_text"> Monitors record concentrations of the major pollutants at a specific location. These raw measurements are converted into a separate AQI 
+            value for each pollutant (ground-level ozone, particle pollution, carbon monoxide, and sulfur dioxide). Different countries have sligthly different indexes.</p>
          </div>
           
     </div>
@@ -43,7 +44,8 @@ return (
         <label for="section3" 
         class="accordion_label">Why is air quality important? </label>
         <div class="accordion_content">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p class="info_text">Local air quality affects how you live and breathe. Like the weather, it can change from day to day or even hour to hour. The AQI is designed to provide simple information about your
+          local air quality and how it may affect your health.</p>
          </div>
           
     </div>
@@ -56,7 +58,7 @@ return (
         <label for="section4" 
         class="accordion_label">What do the values mean? </label>
         <div class="accordion_content">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p class="info_text">The purpose of the AQI is to help you understand what local air quality means to your health. To make it easier to understand, the AQI is divided into six levels of health concern: Good (AQI under 50), Moderate (AQI under 100), Unhealthy for sensitive groups (AQI under 150), Unhealthy (AQI under 200), Very Unhealthy (AQI under 300) and Hazardous (AQI under 500). </p>
          </div>
           
     </div>

@@ -4,18 +4,26 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+  
     max-width:500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     overflow: hidden;
     background: #1687a7;
-    margin-top: 30px;
+    margin-top: 60px;
    
   }
 
   .accordion_label,
   .accordion_content{
     padding: 14px 20px;
+    
+  }
+
+  .info_text {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
   }
 
   .accordion_label{

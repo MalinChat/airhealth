@@ -1,20 +1,26 @@
 
+h4 {
+    margin-top: 50px;
+    font-weight: 500;
+}
+
 p {
 font-size: 20px;
 color: #276678;
-font-weight: bold;
+font-weight: 500;
 }
 
 td {
     font-size: 20px;
     color: #276678;
+    padding: 10px
 
 }
 
 h3, th {
     font-size: 25px;
     color: #276678;
-    font-weight: 600;
+    font-weight: 300;
     }
 
 
