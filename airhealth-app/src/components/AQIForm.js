@@ -25,7 +25,8 @@ function handleEvent(event){
     //the user clicked Forecast
     else {
         requestedData = "Forecast";
-    }
+        
+    }   //passing data up to App.js
         props.onSubmit(requestedData, city)
 
     //reset form fields
@@ -45,7 +46,7 @@ function handleEvent(event){
                         onChange={handleChange}
                         />
                 
-                <br/>
+                 <br/>
                     </label>
                     <button type="submit">Get AQI</button>
                     <button type="button" onClick={handleEvent}>Get forecast</button>

@@ -2,7 +2,7 @@ import "./AQI-Info.css";
 
 
 function AQIInfo() {
-//<button onClick={getCity} type="button">Get city</button>
+    //This is the box that holds the AQI info. 
 return (
 
 <div className="AQIInfo">
