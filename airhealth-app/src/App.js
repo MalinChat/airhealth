@@ -9,7 +9,8 @@ import DisplayAQI from './components/DisplayAQI';
 
 //API Data
 
-const API_KEY ="8cd2f5f45e922a9f84630d9009f8b2bcc76a8489";
+
+const API_KEY = process.env.REACT_APP_AIRQUALITY_API_KEY
 const API_URL="https://api.waqi.info/feed"
 
 function App() {
